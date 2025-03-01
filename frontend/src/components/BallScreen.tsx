@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as motion from "motion/react-client"
 import { spring } from 'motion'
 import { animate } from "motion/mini"
@@ -60,7 +60,7 @@ const BallScreen = (props: BallScreenProps) => {
                     <motion.button
                         className='text-2xl'
                     >
-                        Click Me!
+                        <p className='text-xl font-semibold font-mono text-[#19806d]'>Enter Into My World</p>
                     </motion.button>
                 </motion.div>
 

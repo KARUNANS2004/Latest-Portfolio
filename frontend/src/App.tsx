@@ -24,7 +24,7 @@ function App() {
         {!ballClicked ? (
           <BallScreen setballClicked={setballClicked} />
         ) : (
-          <div className='h-screen w-screen flex justify-between '>
+          <motion.div className='h-screen w-screen flex justify-between '>
             <HamburgerMenu />
             {/* model of pc */}
             <Canvas className='max-h-72 max-w-72 ' camera={{ position: [5, 0, 0] }}>
@@ -32,8 +32,8 @@ function App() {
               <directionalLight position={[0, 5, 5]} intensity={2} />
               <OrbitControls
                 enableZoom={true}
-                maxDistance={5}
-                minDistance={0.8}
+                maxDistance={2}
+                minDistance={2}
                 autoRotate
                 autoRotateSpeed={3}
                 minPolarAngle={Math.PI / 4}
@@ -43,7 +43,7 @@ function App() {
                 <Computer />
               </Suspense>
             </Canvas>
-          </div>
+          </motion.div>
         )
         }
       </div >

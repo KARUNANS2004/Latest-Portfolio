@@ -14,7 +14,7 @@ const HamburgerMenu: React.FC = () => {
     };
 
     return (
-        <div className="relative pl-5">
+        <div className="relative h-screen pl-5">
             {/* Animated Hamburger Icon */}
             <button className="w-12 h-12 flex flex-col justify-between items-center p-2" onClick={toggleMenu}>
                 <motion.div
@@ -40,7 +40,7 @@ const HamburgerMenu: React.FC = () => {
             {/* Menu Items */}
             <AnimatePresence>
                 {isOpen && (
-                    <div className="absolute top-14 left-5 flex flex-col space-y-2">
+                    <div className="absolute top-14 left-5 flex flex-col gap-2 space-y-2">
                         {menuItems.map((item, index) => (
                             <motion.div
                                 key={item}
