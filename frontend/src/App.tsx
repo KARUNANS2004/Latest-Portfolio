@@ -10,6 +10,7 @@ import HamburgerMenu from './components/HamburgerMenu'
 import { Light, SpotLight } from 'three'
 import { motion } from "motion/react"
 import BallScreen from './components/BallScreen'
+import MainPageOfPortfolio from './components/MainPageOfPortfolio'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,25 +25,28 @@ function App() {
         {!ballClicked ? (
           <BallScreen setballClicked={setballClicked} />
         ) : (
-          <motion.div className='h-screen w-screen flex justify-between '>
+          <motion.div className='h-screen w-screen relative flex justify-between bg-[#0a0a23] bg-blend-overlay '>
             <HamburgerMenu />
+            <MainPageOfPortfolio />
             {/* model of pc */}
-            <Canvas className='max-h-72 max-w-72 ' camera={{ position: [5, 0, 0] }}>
-              <ambientLight intensity={2} />
-              <directionalLight position={[0, 5, 5]} intensity={2} />
-              <OrbitControls
-                enableZoom={true}
-                maxDistance={2}
-                minDistance={2}
-                autoRotate
-                autoRotateSpeed={3}
-                minPolarAngle={Math.PI / 4}
-                maxPolarAngle={Math.PI / 2}
-              />
-              <Suspense fallback={null} >
-                <Computer />
-              </Suspense>
-            </Canvas>
+            <div className='absolute top-10 left-0 '>
+              {/* <Canvas className='max-h-72 max-w-72' camera={{ position: [5, 0, 0] }}>
+                <ambientLight intensity={2} />
+                <directionalLight position={[0, 5, 5]} intensity={2} />
+                <OrbitControls
+                  enableZoom={true}
+                  maxDistance={2}
+                  minDistance={2}
+                  autoRotate
+                  autoRotateSpeed={3}
+                  minPolarAngle={Math.PI / 4}
+                  maxPolarAngle={Math.PI / 2}
+                />
+                <Suspense fallback={null} >
+                  <Computer />
+                </Suspense>
+              </Canvas> */}
+            </div>
           </motion.div>
         )
         }
