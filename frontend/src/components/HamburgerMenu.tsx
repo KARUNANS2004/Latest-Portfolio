@@ -7,7 +7,7 @@ import { easeIn } from "motion";
 // Menu items
 const menuItems = ["Home", "About", "Projects", "Skills", "Connect"];
 
-const HamburgerMenu: React.FC = () => {
+const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string) => void }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     // Function to toggle menu
@@ -16,7 +16,7 @@ const HamburgerMenu: React.FC = () => {
     };
 
     return (
-        <div className="absolute h-screen pl-5 pt-5 z-50">
+        <div className="fixed h-screen pl-5 pt-5 z-50">
             {/* Animated Hamburger Icon */}
             <button className="w-12 h-12 flex flex-col justify-between items-center p-2 " onClick={toggleMenu}>
                 <motion.div
@@ -45,6 +45,7 @@ const HamburgerMenu: React.FC = () => {
                     <div className="absolute top-20 left-5 flex flex-col gap-2 space-y-2">
                         {menuItems.map((item, index) => (
                             <motion.div
+                                onClick={() => { scrollToSection(item) }}
                                 key={item}
                                 className="p-4 bg-[#12125b]  text-white rounded-xl cursor-pointer"
                                 whileHover={{

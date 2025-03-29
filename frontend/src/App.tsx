@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react'
+import { Suspense, useRef, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -18,6 +18,8 @@ function App() {
   // this usestate will serve as the button which will appear on the screen when the site loads clicking which will take us to the main portfolio
   const [ballClicked, setballClicked] = useState(false)
 
+  const scrollToSection = useRef<(section: string) => void>(() => { })
+
 
   return (
     <>
@@ -26,8 +28,8 @@ function App() {
           <BallScreen setballClicked={setballClicked} />
         ) : (
           <motion.div className='h-screen w-screen relative flex justify-between bg-[#0a0a23] bg-blend-overlay '>
-            <HamburgerMenu />
-            <MainPageOfPortfolio />
+            <HamburgerMenu scrollToSection={(section) => scrollToSection.current(section)} />
+            <MainPageOfPortfolio scrollToSection={(section) => (scrollToSection.current = section)} />
             {/* model of pc */}
             <div className='absolute top-10 left-0 '>
               {/* <Canvas className='max-h-72 max-w-72' camera={{ position: [5, 0, 0] }}>
