@@ -16,9 +16,9 @@ const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string)
     };
 
     return (
-        <div className="fixed h-screen pl-5 pt-5 z-50">
+        <div className="fixed h-full pl-5 pt-5 z-50">
             {/* Animated Hamburger Icon */}
-            <button className="w-12 h-12 flex flex-col justify-between items-center p-2 " onClick={toggleMenu}>
+            <button className="w-12 h-12 flex flex-col justify-between items-center py-2 " onClick={toggleMenu}>
                 <motion.div
                     className="w-8 h-1 bg-white rounded"
                     style={{ transformOrigin: 'center' }} // Ensures correct rotation
@@ -45,9 +45,12 @@ const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string)
                     <div className="absolute top-20 left-5 flex flex-col gap-2 space-y-2">
                         {menuItems.map((item, index) => (
                             <motion.div
-                                onClick={() => { scrollToSection(item) }}
+                                onClick={() => {
+                                    scrollToSection(item),
+                                        toggleMenu()
+                                }}
                                 key={item}
-                                className="p-4 bg-[#12125b]  text-white rounded-xl cursor-pointer"
+                                className="p-4 bg-[#12125b]  text-white rounded-xl cursor-pointer text-center"
                                 whileHover={{
                                     scale: 1.1,
                                     backgroundColor: "#12125b",

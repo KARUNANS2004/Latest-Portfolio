@@ -12,7 +12,7 @@ const BallScreen = (props: BallScreenProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='w-screen h-screen flex items-center justify-center flex-col pt-8 bg-[#87CEEB]'>
+        <div className='w-full h-full flex items-center justify-center flex-col pt-8 bg-[#87CEEB]'>
             <p className='text-white text-8xl absolute left-[10%] top-0 mt-10'><i className="ri-cloudy-2-fill"></i></p>
             <p className='text-white text-8xl absolute right-[5%] top-0 mt-10'><i className="ri-cloudy-2-fill"></i></p>
             <motion.div className='h-[90%] w-96 bg-slate-900 flex items-center justify-center relative rounded-xl'

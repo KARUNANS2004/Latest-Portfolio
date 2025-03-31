@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import About from '../sections/About'
 import Projects from '../sections/Projects'
 import Skills from '../sections/Skills'
-import { ContactShadows } from 'drei'
 import Connect from '../sections/Connect'
 
 type SectionNames = "About" | "Projects" | "Skills" | "Connect" | "Home"; // ✅ Define allowed keys
@@ -31,9 +30,9 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
   }, [scrollToSection]);
 
   return (
-    <div className=' h-screen w-screen relative '>
+    <div className=' h-full w-full relative '>
       {/* Home section */}
-      <div className='w-screen h-screen'>
+      <div className='w-full h-full'>
         <div className=' h-14 w-14 rounded-full blur-3xl bg-gradient-to-r from-cyan-500 to-blue-500 absolute top-10 left-10  '></div>
         <div className=' h-20 w-20 rounded-full blur-3xl bg-gradient-to-r from-cyan-500 to-blue-500 absolute top-[10%] right-[10%]  '></div>
         <div ref={homeRef} className='w-full h-full flex items-center justify-center text-white text-[60px] font-semibold'>
@@ -43,13 +42,12 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
           </div>
         </div>
       </div>
-
-      
-
-      <section ref={aboutRef}><About /></section>
-      <section ref={projectsRef}><Projects /></section>
-      <section ref={skillsRef}><Skills /></section>
-      <section ref={connectRef}><Connect /></section>
+      <div>
+        <section ref={aboutRef}><About /></section>
+        <section ref={projectsRef}><Projects /></section>
+        <section ref={skillsRef}><Skills /></section>
+        <section ref={connectRef}><Connect /></section>
+      </div>
 
     </div>
   )
