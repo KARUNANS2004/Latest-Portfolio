@@ -5,7 +5,7 @@ import { transition } from "three/examples/jsm/tsl/display/TransitionNode.js";
 import { easeIn } from "motion";
 
 // Menu items
-const menuItems = ["Home", "About", "Projects", "Skills", "Connect"];
+const menuItems = ["Home", "About", "Skills", "Projects", "Connect"];
 
 const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string) => void }) => {
     const [isOpen, setIsOpen] = useState(false);
