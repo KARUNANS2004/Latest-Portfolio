@@ -52,7 +52,7 @@ const About = () => {
           </p>
         </div>
         {/* profile image */}
-        <div className='absolute bottom-0 right-40'>
+        <div className='absolute bottom-10 right-40'>
           <motion.div
             id='profile'
             className='h-[200px] w-[200px] absolute -right-20 -top-72 rounded-full overflow-hidden '

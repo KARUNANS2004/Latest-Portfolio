@@ -3,14 +3,15 @@ import About from '../sections/About'
 import Projects from '../sections/Projects'
 import Skills from '../sections/Skills'
 import Connect from '../sections/Connect'
+import HTML from '../Skills_Logos/HTML'
 
 type SectionNames = "About" | "Projects" | "Skills" | "Connect" | "Home"; // ✅ Define allowed keys
 
 const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (section: string) => void) => void }) => {
-  const aboutRef = useRef<HTMLElement | null>(null)
+  const aboutRef = useRef<HTMLDivElement | null>(null)
   const connectRef = useRef<HTMLElement | null>(null)
   const projectsRef = useRef<HTMLElement | null>(null)
-  const skillsRef = useRef<HTMLElement | null>(null)
+  const skillsRef = useRef<HTMLDivElement | null>(null)
   const homeRef = useRef<HTMLDivElement | null>(null)
 
   const sectionRefs: Record<SectionNames, React.RefObject<HTMLElement | null>> = {
@@ -43,12 +44,11 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
         </div>
       </div>
       <div>
-        <section ref={aboutRef}><About /></section>
+        <div ref={aboutRef}><About /></div>
         <section ref={projectsRef}><Projects /></section>
-        <section ref={skillsRef}><Skills /></section>
+        <div ref={skillsRef}><Skills /></div>
         <section ref={connectRef}><Connect /></section>
       </div>
-
     </div>
   )
 }
