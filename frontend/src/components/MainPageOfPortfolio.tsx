@@ -10,7 +10,7 @@ type SectionNames = "About" | "Projects" | "Skills" | "Connect" | "Home"; // ✅
 const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (section: string) => void) => void }) => {
   const aboutRef = useRef<HTMLDivElement | null>(null)
   const connectRef = useRef<HTMLElement | null>(null)
-  const projectsRef = useRef<HTMLElement | null>(null)
+  const projectsRef = useRef<HTMLDivElement | null>(null)
   const skillsRef = useRef<HTMLDivElement | null>(null)
   const homeRef = useRef<HTMLDivElement | null>(null)
 
@@ -45,8 +45,8 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
       </div>
       <div>
         <div ref={aboutRef}><About /></div>
-        <section ref={projectsRef}><Projects /></section>
         <div ref={skillsRef}><Skills /></div>
+        <div ref={projectsRef}><Projects /></div>
         <section ref={connectRef}><Connect /></section>
       </div>
     </div>
