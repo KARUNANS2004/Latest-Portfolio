@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { OrbitControls } from '@react-three/drei'
+import { useInView } from 'react-intersection-observer';
 
 const Model = () => {
     const gltf = useGLTF("/Html_logo/scene.gltf")
@@ -14,21 +15,30 @@ const Model = () => {
 };
 
 const HTML = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: false,
+        threshold: 0.2
+    })
+
     return (
-        <div className='h-full w-full flex flex-col items-center justify-center'>
-            <Canvas className='max-h-32 max-w-32' camera={{ position: [3, 4, 5], near: 0.1, far: 100 }}>
-                <ambientLight intensity={3} />
-                <directionalLight position={[2, 5, 2]} intensity={2} />
-                <Model />
-                <OrbitControls
-                    enableZoom={false}
-                    autoRotate
-                    autoRotateSpeed={3}  // Smoother rotation
-                    minPolarAngle={Math.PI / 3}
-                    maxPolarAngle={Math.PI}
-                    target={[0, 3, 0]} // Focus on center
-                />
-            </Canvas>
+        <div ref={ref} className='h-full w-full flex flex-col items-center justify-center'>
+            {inView && (
+                <Canvas className='max-h-32 max-w-32' camera={{ position: [3, 4, 5], near: 0.1, far: 1000 }}>
+                    <ambientLight intensity={3} />
+                    <directionalLight position={[2, 5, 2]} intensity={2} />
+                    <Suspense fallback={null}>
+                        <Model />
+                    </Suspense>
+                    <OrbitControls
+                        enableZoom={false}
+                        autoRotate
+                        autoRotateSpeed={3}  // Smoother rotation
+                        minPolarAngle={Math.PI / 3}
+                        maxPolarAngle={Math.PI}
+                        target={[0, 3, 0]} // Focus on center
+                    />
+                </Canvas>
+            )}
             <h2 className='text-white font-semibold text-xl'>HTML</h2>
         </div>
     )

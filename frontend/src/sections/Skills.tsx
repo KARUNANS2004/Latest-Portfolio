@@ -17,8 +17,7 @@ import NODE from '../Skills_Logos/NODE'
 import Express from '../Skills_Logos/Express'
 import MongoDB from '../Skills_Logos/MongoDB'
 import Firebase from '../Skills_Logos/Firebase'
-import JWT from '../Skills_Logos/JWT'
-
+import Git from '../Skills_Logos/Git'
 
 const Skills = () => {
     return (
@@ -87,8 +86,23 @@ const Skills = () => {
                             <Firebase />
                         </div>
                         <div className='h-40 w-40'>
-                            <JWT />
+                            <Git />
                         </div>
+                    </div>
+                </div>
+                <div id='other-tools' className='w-full h-full flex gap-20 border-[2px] border-dashed border-[#1a1a5a] p-6' >
+                    <div className='flex h-full w-[10%] justify-start items-start my-10  '>
+                        <p className='text-white text-center font-semibold p-5 bg-[#4d1d1d] rounded-full w-fit'>Other Tools</p>
+                    </div>
+                    <div className='flex h-full w-[90%] flex-wrap gap-10 justify-start items-center'>
+                        <ul className='text-white  gap-5 list-disc'>
+                            <li>JWT</li>
+                            <li>Axios</li>
+                            <li>Vite</li>
+                            <li>VSCode</li>
+                            <li>npm</li>
+                            <li>OSM & Leaflet</li>
+                        </ul>
                     </div>
                 </div>
             </div>

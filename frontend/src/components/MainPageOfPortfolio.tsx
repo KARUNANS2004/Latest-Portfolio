@@ -34,7 +34,7 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
     <div className=' h-full w-full relative '>
       {/* Home section */}
       <div className='w-full h-full'>
-        <div className=' h-14 w-14 rounded-full blur-3xl bg-gradient-to-r from-cyan-500 to-blue-500 absolute top-10 left-10  '></div>
+        <div className=' h-14 w-14 rounded-full blur-3xl bg-gradient-to-r from-cyan-500 to-blue-500 absolute top-64 left-64  '></div>
         <div className=' h-20 w-20 rounded-full blur-3xl bg-gradient-to-r from-cyan-500 to-blue-500 absolute top-[10%] right-[10%]  '></div>
         <div ref={homeRef} className='w-full h-full flex items-center justify-center text-white text-[60px] font-semibold'>
           <div className='text-center'>

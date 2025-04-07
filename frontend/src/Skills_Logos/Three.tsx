@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { useGLTF } from '@react-three/drei'
+import { Html, useGLTF } from '@react-three/drei'
 import { OrbitControls } from '@react-three/drei'
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion'
 
 const Model = () => {
     const gltf = useGLTF("/Three_JS_Logo/scene.gltf")
@@ -9,25 +11,34 @@ const Model = () => {
 };
 
 const Three = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: false,
+        threshold: 0.2
+    })
     return (
-        <div className='h-full w-full flex flex-col items-center justify-center  '>
-            <Canvas className='max-h-32 max-w-32' camera={{ position: [0, 0, 0], near: 0.1, far: 100 }}>
-                <ambientLight intensity={2} />
-                <directionalLight position={[0, 5, 5]} intensity={10} />
-                <Model />
-                <OrbitControls
-                    enableZoom={false}
-                    maxDistance={10}
-                    minDistance={10}
-                    autoRotate
-                    autoRotateSpeed={3}
-                    minPolarAngle={Math.PI / 2}
-                    maxPolarAngle={Math.PI / 2}
-                    target={[0, 0, 0]}
-                />
-            </Canvas>
+        <div ref={ref} className='h-full w-full flex flex-col items-center justify-center  '>
+            {inView && (
+                <Canvas className='max-h-32 max-w-32' camera={{ position: [0, 0, 0], near: 0.1, far: 100 }}>
+                    <ambientLight intensity={2} />
+                    <directionalLight position={[0, 5, 5]} intensity={10} />
+                    <Suspense fallback={null}>
+                        <Model />
+                    </Suspense>
+                    <OrbitControls
+                        enableZoom={false}
+                        maxDistance={10}
+                        minDistance={10}
+                        autoRotate
+                        autoRotateSpeed={3}
+                        minPolarAngle={Math.PI / 2}
+                        maxPolarAngle={Math.PI / 2}
+                        target={[0, 0, 0]}
+                    />
+                </Canvas>
+            )
+            }
             <h2 className='text-white font-semibold text-xl'>Three.js</h2>
-        </div>
+        </div >
     )
 }
 
