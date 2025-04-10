@@ -101,7 +101,7 @@ const Skills = () => {
                             <li>Vite</li>
                             <li>VSCode</li>
                             <li>npm</li>
-                            <li>OSM & Leaflet</li>
+                            <li>OSM (Open Street Maps)</li>
                         </ul>
                     </div>
                 </div>

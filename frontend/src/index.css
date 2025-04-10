@@ -2,4 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
 
+@keyframes rotation{
+    0% {--gradient-angle: 0deg;}
+    100% {--gradient-angle: 360deg;}
+}
+
+.card{
+    height: 60vh;
+    aspect-ratio: 1/1.5;
+    border-radius: 0.6rem;
+    inset: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+.card::after,
+.card::before{
+    content: "";
+    position: absolute;
+    inset:0;
+    z-index: -1;
+    background:conic-gradient(
+        from var(--gradient-angle),
+        #052B2F,
+        #073438,
+        #0e4b50,
+        #2d8f85,
+        #637c54
+    );
+    border-radius: inherit;
+    animation: rotation 10s linear infinite;
+}
+
+.card::after{
+    filter: blur(3px);
+}

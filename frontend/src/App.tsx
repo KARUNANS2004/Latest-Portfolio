@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import './App.css'
+import './index.css'
 import HamburgerMenu from './components/HamburgerMenu'
 import { motion } from "motion/react"
 import BallScreen from './components/BallScreen'
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <div className="h-screen w-[99.999999999%] flex">
+      <div className="h-screen w-[99.999999999%] flex ">
         {!ballClicked ? (
           <BallScreen setballClicked={setballClicked} />
         ) : (
