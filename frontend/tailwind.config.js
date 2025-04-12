@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'uber-thumbnail':"url('/src/assets/Uber.png')"
+      },
+      cursor: {
+        'car-cursor': 'url(./src/assets/uber_hover.svg), pointer',
+      }
+    }
   },
   plugins: [],
 }

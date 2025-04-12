@@ -14,8 +14,6 @@
 }
 
 .card{
-    height: 60vh;
-    aspect-ratio: 1/1.5;
     border-radius: 0.6rem;
     inset: 0px;
     display: flex;
@@ -34,11 +32,11 @@
     z-index: -1;
     background:conic-gradient(
         from var(--gradient-angle),
-        #052B2F,
-        #073438,
-        #0e4b50,
-        #2d8f85,
-        #637c54
+        #0a0a23,
+        #14143b,
+        #22224f,
+        #3c3c6c,
+        #57579a
     );
     border-radius: inherit;
     animation: rotation 10s linear infinite;
@@ -47,3 +45,26 @@
 .card::after{
     filter: blur(3px);
 }
+
+@layer utilities{
+    .cursor-car{
+        cursor: url('./assets/uber_hover.svg');
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+  
+.animate-gradient {
+  animation: gradientMove 4s ease infinite;
+}
+  

@@ -9,7 +9,7 @@ type SectionNames = "About" | "Projects" | "Skills" | "Connect" | "Home"; // ✅
 
 const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (section: string) => void) => void }) => {
   const aboutRef = useRef<HTMLDivElement | null>(null)
-  const connectRef = useRef<HTMLElement | null>(null)
+  const connectRef = useRef<HTMLDivElement | null>(null)
   const projectsRef = useRef<HTMLDivElement | null>(null)
   const skillsRef = useRef<HTMLDivElement | null>(null)
   const homeRef = useRef<HTMLDivElement | null>(null)
@@ -31,7 +31,7 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
   }, [scrollToSection]);
 
   return (
-    <div className=' h-full w-full relative bg-[#0a0a23] '>
+    <div className=' h-full w-full relative bg-[#08081e] '>
       {/* Home section */}
       <div className='w-full h-full'>
         <div className=' h-14 w-14 rounded-full blur-3xl bg-gradient-to-r from-cyan-500 to-blue-500 absolute top-64 left-64  '></div>
@@ -47,7 +47,7 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
         <div ref={aboutRef}><About /></div>
         <div ref={skillsRef}><Skills /></div>
         <div ref={projectsRef}><Projects /></div>
-        <section ref={connectRef}><Connect /></section>
+        <div ref={connectRef}><Connect /></div>
       </div>
     </div>
   )

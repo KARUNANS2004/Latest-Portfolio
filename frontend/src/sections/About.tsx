@@ -23,7 +23,7 @@ const About = () => {
   // }
 
   return (
-    <div className='w-full bg-[#0a0a23] flex  flex-col items-center'>
+    <div className='w-full bg-[#08081e] flex  flex-col items-center'>
       <div className='text-white font-extralight text-[30px] flex items-center justify-center gap-10 overflow-hidden h-20 w-[90%]'>
         <div className='w-[35%] h-[1px] bg-white'></div>
         <p className='w-[30%] text-center'>Wanna Know About Me ?</p>

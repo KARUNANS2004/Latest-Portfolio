@@ -2,8 +2,7 @@ import React from 'react'
 
 const Connect = () => {
   return (
-    <div>
-      
+    <div className='bg-[#08081e]'>
     </div>
   )
 }
