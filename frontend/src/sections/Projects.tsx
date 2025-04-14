@@ -7,10 +7,10 @@ const Projects = () => {
   const [todoHover, setTodoHover] = useState(false)
   const [pokedexHover, setPokedexHover] = useState(false)
   return (
-    <div className='bg-[#08081e]  flex flex-col items-center'>
+    <div className='bg-[#08081e]  flex flex-col items-center z-30'>
       <div className='text-white font-extralight text-[30px] flex items-center justify-center gap-10 h-20 w-[90%]'>
         <div className='w-[35%] h-[1px] bg-white'></div>
-        <p className='w-[30%] text-center'>Toppers of the Projects List </p>
+        <p className='w-[30%] text-center border-t-2 border-b-2 py-4 rounded-t-2xl rounded-b-2xl'>Toppers of the Projects List </p>
         <div className='w-[35%] h-[1px] bg-white'></div>
       </div>
       <div id='showcased-projects' className='mt-10 w-[90%] flex flex-wrap px-5 gap-10 justify-between '>
@@ -19,7 +19,7 @@ const Projects = () => {
           perspective={900}
           reset={true}
           max={10}
-          className="w-full sm:w-[90%] md:w-[70%] lg:w-[45%] rounded-[0.6rem] bg-white mx-auto"
+          className="w-full sm:w-[90%] md:w-[70%] lg:w-[45%] rounded-[0.6rem] bg-white mx-auto z-[10]"
         >
           <div
             id="project-2"
@@ -39,7 +39,7 @@ const Projects = () => {
               }}
               className="relative cursor-[url(car-cursor),_pointer] bg-[url('/src/assets/Uber.png')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-[0.6rem]"
             >
-              <div className=" text-white font-semibold bg-gradient-to-t from-black to-transparent text-2xl sm:text-3xl md:text-4xl absolute bottom-0 w-full h-[25%] sm:h-[22%] flex flex-col justify-end gap-1 sm:gap-2 px-4 sm:px-6 pb-2">
+              <div className=" text-white rounded-b-[0.6rem] font-semibold bg-gradient-to-t from-black to-transparent text-2xl sm:text-3xl md:text-4xl absolute bottom-0 w-full h-[25%] sm:h-[22%] flex flex-col justify-end gap-1 sm:gap-2 px-4 sm:px-6 pb-2">
                 <div
                   className='flex justify-between items-center w-full'
                   onMouseEnter={() => setUberHover(true)}
@@ -97,7 +97,7 @@ const Projects = () => {
           perspective={900}
           reset={true}
           max={10}
-          className="w-full sm:w-[90%] md:w-[70%] lg:w-[45%] rounded-[0.6rem] bg-white mx-auto"
+          className="w-full sm:w-[90%] md:w-[70%] lg:w-[45%] rounded-[0.6rem] bg-white mx-auto z-[10]"
         >
           <div
             id="project-2"
@@ -117,7 +117,7 @@ const Projects = () => {
               }}
               className="relative cursor-[url(car-cursor),_pointer] bg-[url('/src/assets/todo.jpg')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-[0.6rem]"
             >
-              <div className=" text-white font-semibold bg-gradient-to-t from-black to-transparent text-2xl sm:text-3xl md:text-4xl absolute bottom-0 w-full h-[25%] sm:h-[22%] flex flex-col justify-end gap-1 sm:gap-2 px-4 sm:px-6 pb-2">
+              <div className=" text-white rounded-b-[0.6rem] font-semibold bg-gradient-to-t from-black to-transparent text-2xl sm:text-3xl md:text-4xl absolute bottom-0 w-full h-[25%] sm:h-[22%] flex flex-col justify-end gap-1 sm:gap-2 px-4 sm:px-6 pb-2">
                 <div
                   className='flex justify-between items-center w-full'
                   onMouseEnter={() => setPokedexHover(true)}
@@ -155,7 +155,7 @@ const Projects = () => {
           perspective={900}
           reset={true}
           max={10}
-          className="w-full sm:w-[90%] md:w-[70%] lg:w-[45%] rounded-[0.6rem] bg-white mx-auto"
+          className="w-full sm:w-[90%] md:w-[70%] lg:w-[45%] rounded-[0.6rem] bg-white mx-auto z-[10]"
         >
           <div
             id="project-2"
@@ -173,9 +173,9 @@ const Projects = () => {
               onMouseLeave={() => {
                 setPokedexHover(false);
               }}
-              className="relative cursor-[url(car-cursor),_pointer] bg-[url('/src/assets/Pokedex.jpg')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-[0.6rem]"
+              className="relative overflow-hidden rounded-[0.6rem] cursor-[url(car-cursor),_pointer] bg-[url('/src/assets/Pokedex.jpg')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)]"
             >
-              <div className="text-white font-semibold bg-gradient-to-t from-black to-transparent text-2xl sm:text-3xl md:text-4xl absolute bottom-0 w-full h-[25%] sm:h-[22%] flex flex-col justify-end gap-1 sm:gap-2 px-4 sm:px-6 pb-2">
+              <div className="text-white rounded-b-[0.6rem] font-semibold bg-gradient-to-t from-black to-transparent text-2xl sm:text-3xl md:text-4xl absolute bottom-0 w-full h-[25%] sm:h-[22%] flex flex-col justify-end gap-1 sm:gap-2 px-4 sm:px-6 pb-2">
                 <div
                   className='flex justify-between items-center w-full'
                   onMouseEnter={() => setPokedexHover(true)}

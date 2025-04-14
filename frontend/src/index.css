@@ -46,12 +46,6 @@
     filter: blur(3px);
 }
 
-@layer utilities{
-    .cursor-car{
-        cursor: url('./assets/uber_hover.svg');
-    }
-}
-
 @keyframes gradientMove {
     0% {
       background-position: 0% 50%;
@@ -67,4 +61,3 @@
 .animate-gradient {
   animation: gradientMove 4s ease infinite;
 }
-  

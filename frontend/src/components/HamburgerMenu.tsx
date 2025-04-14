@@ -9,6 +9,7 @@ const menuItems = ["Home", "About", "Skills", "Projects", "Connect"];
 
 const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string) => void }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isExiting, setIsExiting] = useState(false)
 
     // Function to toggle menu
     const toggleMenu = () => {
@@ -16,7 +17,7 @@ const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string)
     };
 
     return (
-        <div className="fixed h-full pl-5 pt-5 z-50">
+        <div className="fixed h-full pl-5 pt-5 z-[101]">
             {/* Animated Hamburger Icon */}
             <button className="w-12 h-12 flex flex-col justify-between items-center py-2 " onClick={toggleMenu}>
                 <motion.div
@@ -40,32 +41,42 @@ const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string)
 
 
             {/* Menu Items */}
-            <AnimatePresence>
+            <AnimatePresence
+                onExitComplete={() => setIsExiting(false)} // Reset on complete
+            >
                 {isOpen && (
                     <div className="absolute top-20 left-5 flex flex-col gap-2 space-y-2">
                         {menuItems.map((item, index) => (
                             <motion.div
                                 onClick={() => {
-                                    scrollToSection(item),
-                                        toggleMenu()
+                                    scrollToSection(item);
+                                    toggleMenu();
                                 }}
                                 key={item}
-                                className="p-4 bg-[#12125b]  text-white rounded-xl cursor-pointer text-center"
-                                whileHover={{
-                                    scale: 1.1,
-                                    backgroundColor: "#12125b",
-                                    boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.5)",
-                                    translateX: '10px',
-                                    translateY: '5px',
-                                    transition: {
-                                        duration: 0.3
-                                    }
-                                }}
+                                className="p-4 bg-[#12125b] text-white rounded-xl cursor-pointer text-center"
+                                whileHover={
+                                    !isExiting
+                                        ? {
+                                            scale: 1.1,
+                                            backgroundColor: "#12125b",
+                                            boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.5)",
+                                            translateX: '10px',
+                                            translateY: '5px',
+                                            transition: {
+                                                duration: 0.3,
+                                            },
+                                        }
+                                        : {}
+                                }
                                 initial={{ x: -50, opacity: 0 }}
                                 animate={{
                                     x: 0,
                                     opacity: 1,
-                                    transition: { delay: index * 0.1, type: "spring", stiffness: 120 },
+                                    transition: {
+                                        delay: index * 0.1,
+                                        type: "spring",
+                                        stiffness: 120,
+                                    },
                                 }}
                                 exit={{
                                     y: 50,

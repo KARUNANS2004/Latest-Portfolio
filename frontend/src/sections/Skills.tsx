@@ -24,33 +24,33 @@ const Skills = () => {
         <div className='w-full h-full bg-[#08081e] flex flex-col items-center pt-10'>
             <div className='text-white font-extralight text-[30px] flex items-center justify-center gap-10 h-20 w-[90%] overflow-hidden'>
                 <div className='w-[35%] h-[1px] bg-white'></div>
-                <p className='w-[30%] text-center'>Some of my Tech Skills!</p>
+                <p className='w-[30%] text-center border-t-2 border-b-2 py-4 rounded-t-2xl rounded-b-2xl'>Some of my Tech Skills!</p>
                 <div className='w-[35%] h-[1px] bg-white'></div>
             </div>
-            <div className='flex flex-col gap-14 h-full w-full justify-center items-center p-10'>
-                <div id='Languages' className='w-full h-full flex gap-2 border-[2px] border-dashed border-[#1a1a5a] p-6' >
-                    <div className='flex h-full w-[10%] justify-start items-start mt-14 '>
+            <div className='flex flex-col bg-[#08081e] gap-14 h-full w-full justify-center items-center p-10'>
+                <div id='Languages' className='w-full h-full flex gap-2 border-[2px] border-dashed backdrop-blur-sm border-[#1a1a5a] p-6 z-[100]' >
+                    <div className='flex h-full w-[10%] justify-start items-start mt-14  z-[100]'>
                         <p className='text-white font-semibold p-5 bg-[#4d1d1d] rounded-full w-fit'>Languages</p>
                     </div>
-                    <div className='flex h-full w-[90%] flex-wrap gap-10 justify-center items-center'>
-                        <div className='h-40 w-40'>
+                    <div className='flex h-full w-[90%] flex-wrap gap-10 justify-center items-center z-[100]'>
+                        <div className='h-40 w-40 z-[100]'>
                             <HTML />
                         </div>
-                        <div className='h-40 w-40'>
+                        <div className='h-40 w-40 z-[100]'>
                             <CSS />
                         </div>
-                        <div className='h-40 w-40'>
+                        <div className='h-40 w-40 z-[100]'>
                             <JavaScript />
                         </div>
-                        <div className='h-40 w-40'>
+                        <div className='h-40 w-40 z-[100]'>
                             <TypeScript />
                         </div>
-                        <div className='h-40 w-40'>
+                        <div className='h-40 w-40 z-[100]'>
                             <CPP />
                         </div>
                     </div>
                 </div>
-                <div id='tools' className='w-full h-full flex gap-2 border-[2px] border-dashed border-[#1a1a5a] p-6' >
+                <div id='tools' className='w-full h-full flex gap-2 border-[2px] border-dashed border-[#1a1a5a] p-6 z-[100] backdrop-blur-sm' >
                     <div className='flex h-full w-[10%] justify-start items-start mt-14 '>
                         <p className='text-white text-center font-semibold p-5 bg-[#4d1d1d] rounded-full w-fit'>Tools & Frameworks</p>
                     </div>
@@ -90,7 +90,7 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
-                <div id='other-tools' className='w-full h-full flex gap-20 border-[2px] border-dashed border-[#1a1a5a] p-6' >
+                <div id='other-tools' className='w-full h-full flex gap-20 border-[2px] border-dashed border-[#1a1a5a] p-6 z-[100] backdrop-blur-sm' >
                     <div className='flex h-full w-[10%] justify-start items-start my-10  '>
                         <p className='text-white text-center font-semibold p-5 bg-[#4d1d1d] rounded-full w-fit'>Other Tools</p>
                     </div>

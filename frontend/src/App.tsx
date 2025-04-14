@@ -20,7 +20,7 @@ function App() {
         {!ballClicked ? (
           <BallScreen setballClicked={setballClicked} />
         ) : (
-          <motion.div className='h-screen w-full relative flex justify-between bg-[#0a0a23] bg-blend-overlay '>
+          <motion.div className='h-screen w-full relative flex justify-between bg-[#08081e] bg-blend-overlay '>
             <HamburgerMenu scrollToSection={(section) => scrollToSection.current(section)} />
             <MainPageOfPortfolio scrollToSection={(section) => (scrollToSection.current = section)} />
             {/* model of pc */}

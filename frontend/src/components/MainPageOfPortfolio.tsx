@@ -43,7 +43,7 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
           </div>
         </div>
       </div>
-      <div className='flex flex-col py-2 bg-[#0a0a23]'>
+      <div className='flex flex-col py-2 bg-[#08081e]'>
         <div ref={aboutRef}><About /></div>
         <div ref={skillsRef}><Skills /></div>
         <div ref={projectsRef}><Projects /></div>

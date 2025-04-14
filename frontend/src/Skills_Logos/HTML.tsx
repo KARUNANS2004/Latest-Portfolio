@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { OrbitControls } from '@react-three/drei'
@@ -21,8 +21,8 @@ const HTML = () => {
     })
 
     return (
-        <div ref={ref} className='h-full w-full flex flex-col items-center justify-center'>
-            {inView && (
+        <div ref={ref} className='h-full w-full flex flex-col items-center justify-end '>
+            {(inView) && (
                 <Canvas className='max-h-32 max-w-32' camera={{ position: [3, 4, 5], near: 0.1, far: 1000 }}>
                     <ambientLight intensity={3} />
                     <directionalLight position={[2, 5, 2]} intensity={2} />
@@ -39,7 +39,7 @@ const HTML = () => {
                     />
                 </Canvas>
             )}
-            <h2 className='text-white font-semibold text-xl'>HTML</h2>
+            <h2 className='text-white font-semibold text-xl cursor-pointer'>HTML</h2>
         </div>
     )
 }

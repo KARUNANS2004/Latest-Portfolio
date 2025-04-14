@@ -17,7 +17,7 @@ const TypeScript = () => {
     })
     return (
         <div>
-            <div ref={ref} className='h-full w-full flex flex-col items-center justify-center  '>
+            <div ref={ref} className='h-full w-full flex flex-col items-center justify-end '>
                 {inView && (
                     <Canvas className='max-h-32 max-w-32' camera={{ position: [0, 0, 0], near: 0.1, far: 100 }}>
                         <ambientLight intensity={2} />
