@@ -31,7 +31,7 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
   }, [scrollToSection]);
 
   return (
-    <div className=' h-full w-full relative bg-[#040417] '>
+    <div className='w-full relative bg-[#040417]  '>
       {/* Home section */}
       <div className='w-full h-full'>
         <div className=' h-14 w-14 rounded-full blur-3xl bg-gradient-to-r from-cyan-500 to-blue-500 absolute top-64 left-64  '></div>

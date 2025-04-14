@@ -21,8 +21,8 @@ import Git from '../Skills_Logos/Git'
 
 const Skills = () => {
     return (
-        <div className='w-full h-full bg-[#040417] flex flex-col items-center pt-10'>
-            <div className='text-white font-extralight text-[30px] flex items-center justify-center gap-10 h-20 w-[90%] overflow-hidden'>
+        <div className='w-full h-full bg-[#040417] flex flex-col items-center pt-10 pb-10'>
+            <div className='text-white font-extralight text-md lg:text-[30px] flex items-center justify-center gap-10 h-20 w-[90%] '>
                 <div className='w-[35%] h-[1px] bg-white'></div>
                 <p className='w-[30%] text-center border-t-2 border-b-2 py-4 rounded-t-2xl rounded-b-2xl'>Some of my Tech Skills!</p>
                 <div className='w-[35%] h-[1px] bg-white'></div>
@@ -30,7 +30,7 @@ const Skills = () => {
             <div className='text-white mt-5 text-2xl font-semibold border rounded-3xl px-5 py-2'><p>Hover Over My Skills!</p>
             </div>
             <div className='flex flex-col bg-[#040417] gap-14 h-full w-full justify-center items-center p-10'>
-                <div id='Languages' className='w-full h-full flex gap-2 border-[2px] border-dashed backdrop-blur-sm border-[#1a1a5a] p-6 z-[100]' >
+                <div id='Languages' className='w-full h-full flex-col lg:flex gap-2 border-[2px] border-dashed backdrop-blur-sm border-[#1a1a5a] p-6 z-[100]' >
                     <div className='flex h-full w-[10%] justify-start items-start mt-14  z-[100]'>
                         <p className='text-white font-semibold p-5 bg-[#4d1d1d] rounded-full w-fit'>Languages</p>
                     </div>
@@ -52,7 +52,7 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
-                <div id='tools' className='w-full h-full flex gap-2 border-[2px] border-dashed border-[#1a1a5a] p-6 z-[100] backdrop-blur-sm' >
+                <div id='tools' className='w-full h-full flex-col lg:flex gap-2 border-[2px] border-dashed border-[#1a1a5a] p-6 z-[100] backdrop-blur-sm' >
                     <div className='flex h-full w-[10%] justify-start items-start mt-14 '>
                         <p className='text-white text-center font-semibold p-5 bg-[#4d1d1d] rounded-full w-fit'>Tools & Frameworks</p>
                     </div>
@@ -92,12 +92,12 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
-                <div id='other-tools' className='w-full h-full flex gap-20 border-[2px] border-dashed border-[#1a1a5a] p-6 z-[100] backdrop-blur-sm' >
-                    <div className='flex h-full w-[10%] justify-start items-start my-10  '>
+                <div id='other-tools' className='w-full h-full flex gap-20 lg:gap-10 border-[2px] border-dashed border-[#1a1a5a] p-6 z-[100] backdrop-blur-sm' >
+                    <div className='flex h-full w-full lg:w-[10%] justify-start items-start mt-5  '>
                         <p className='text-white text-center font-semibold p-5 bg-[#4d1d1d] rounded-full w-fit'>Other Tools</p>
                     </div>
                     <div className='flex h-full w-[90%] flex-wrap gap-10 justify-start items-center'>
-                        <ul className='text-white  gap-5 list-disc'>
+                        <ul className='text-white pl-2  gap-5 list-disc'>
                             <li>JWT</li>
                             <li>Axios</li>
                             <li>Vite</li>

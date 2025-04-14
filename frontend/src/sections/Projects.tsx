@@ -7,8 +7,8 @@ const Projects = () => {
   const [todoHover, setTodoHover] = useState(false)
   const [pokedexHover, setPokedexHover] = useState(false)
   return (
-    <div className='bg-[#040417]  flex flex-col items-center z-30'>
-      <div className='text-white font-extralight text-[30px] flex items-center justify-center gap-10 h-20 w-[90%]'>
+    <div className='bg-[#040417]  flex flex-col items-center z-30 '>
+      <div className='text-white font-extralight text-md lg:text-[30px] flex items-center justify-center gap-10 h-20 w-[90%] '>
         <div className='w-[35%] h-[1px] bg-white'></div>
         <p className='w-[30%] text-center border-t-2 border-b-2 py-4 rounded-t-2xl rounded-b-2xl'>Toppers of the Project List </p>
         <div className='w-[35%] h-[1px] bg-white'></div>
@@ -64,7 +64,7 @@ const Projects = () => {
                     Technologies Used
                   </h1>
 
-                  <div className="flex items-center my-3">
+                  <div className="flex flex-wrap items-center my-3">
                     <p className='text-blue-200 text-3xl p-1 rounded-full aspect-square text-center border w-12 bg-gray-800'><i className="ri-reactjs-fill font-extralight"></i></p>
                     <p className='text-blue-400 text-3xl p-1 rounded-full aspect-square text-center w-12 border -ml-2 bg-gray-800'><i className="ri-tailwind-css-fill"></i></p>
                     <p className='text-purple-700 text-3xl p-1 rounded-full aspect-square text-center w-12 border -ml-2 bg-gray-800'><i className="font-extralight ri-remixicon-line"></i></p>
