@@ -31,7 +31,7 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
   }, [scrollToSection]);
 
   return (
-    <div className=' h-full w-full relative bg-[#08081e] '>
+    <div className=' h-full w-full relative bg-[#040417] '>
       {/* Home section */}
       <div className='w-full h-full'>
         <div className=' h-14 w-14 rounded-full blur-3xl bg-gradient-to-r from-cyan-500 to-blue-500 absolute top-64 left-64  '></div>
@@ -43,7 +43,7 @@ const MainPageOfPortfolio = ({ scrollToSection }: { scrollToSection: (fn: (secti
           </div>
         </div>
       </div>
-      <div className='flex flex-col py-2 bg-[#08081e]'>
+      <div className='flex flex-col py-2 bg-[#040417]'>
         <div ref={aboutRef}><About /></div>
         <div ref={skillsRef}><Skills /></div>
         <div ref={projectsRef}><Projects /></div>

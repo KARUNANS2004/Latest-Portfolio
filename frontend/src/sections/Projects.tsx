@@ -7,10 +7,10 @@ const Projects = () => {
   const [todoHover, setTodoHover] = useState(false)
   const [pokedexHover, setPokedexHover] = useState(false)
   return (
-    <div className='bg-[#08081e]  flex flex-col items-center z-30'>
+    <div className='bg-[#040417]  flex flex-col items-center z-30'>
       <div className='text-white font-extralight text-[30px] flex items-center justify-center gap-10 h-20 w-[90%]'>
         <div className='w-[35%] h-[1px] bg-white'></div>
-        <p className='w-[30%] text-center border-t-2 border-b-2 py-4 rounded-t-2xl rounded-b-2xl'>Toppers of the Projects List </p>
+        <p className='w-[30%] text-center border-t-2 border-b-2 py-4 rounded-t-2xl rounded-b-2xl'>Toppers of the Project List </p>
         <div className='w-[35%] h-[1px] bg-white'></div>
       </div>
       <div id='showcased-projects' className='mt-10 w-[90%] flex flex-wrap px-5 gap-10 justify-between '>

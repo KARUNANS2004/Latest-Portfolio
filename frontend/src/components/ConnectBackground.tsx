@@ -85,7 +85,7 @@ const ConnectBackground = () => {
                         default: OutMode.split && OutMode.bounce,
                     },
                     random: false,
-                    speed: 1,
+                    speed: 3,
                     straight: true,
                 },
                 number: {

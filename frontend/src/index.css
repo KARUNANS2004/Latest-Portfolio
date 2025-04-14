@@ -59,5 +59,27 @@
 }
   
 .animate-gradient {
-  animation: gradientMove 4s ease infinite;
+  animation: gradientMove 3s ease infinite;
+}
+
+.connect-page::after,
+.connect-page::before{
+    content: "";
+    position: absolute;
+    inset:0;
+    z-index: -1;
+    background:conic-gradient(
+        from var(--gradient-angle),
+        #0a0a23,
+        #14143b,
+        #22224f,
+        #3c3c6c,
+        #57579a
+    );
+    border-radius: inherit;
+    animation: rotation 10s linear infinite;
+}
+
+.connect-page::after{
+    filter: blur(3px);
 }

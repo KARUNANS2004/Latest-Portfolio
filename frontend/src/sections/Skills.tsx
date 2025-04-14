@@ -21,13 +21,13 @@ import Git from '../Skills_Logos/Git'
 
 const Skills = () => {
     return (
-        <div className='w-full h-full bg-[#08081e] flex flex-col items-center pt-10'>
+        <div className='w-full h-full bg-[#040417] flex flex-col items-center pt-10'>
             <div className='text-white font-extralight text-[30px] flex items-center justify-center gap-10 h-20 w-[90%] overflow-hidden'>
                 <div className='w-[35%] h-[1px] bg-white'></div>
                 <p className='w-[30%] text-center border-t-2 border-b-2 py-4 rounded-t-2xl rounded-b-2xl'>Some of my Tech Skills!</p>
                 <div className='w-[35%] h-[1px] bg-white'></div>
             </div>
-            <div className='flex flex-col bg-[#08081e] gap-14 h-full w-full justify-center items-center p-10'>
+            <div className='flex flex-col bg-[#040417] gap-14 h-full w-full justify-center items-center p-10'>
                 <div id='Languages' className='w-full h-full flex gap-2 border-[2px] border-dashed backdrop-blur-sm border-[#1a1a5a] p-6 z-[100]' >
                     <div className='flex h-full w-[10%] justify-start items-start mt-14  z-[100]'>
                         <p className='text-white font-semibold p-5 bg-[#4d1d1d] rounded-full w-fit'>Languages</p>
