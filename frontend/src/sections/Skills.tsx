@@ -27,6 +27,8 @@ const Skills = () => {
                 <p className='w-[30%] text-center border-t-2 border-b-2 py-4 rounded-t-2xl rounded-b-2xl'>Some of my Tech Skills!</p>
                 <div className='w-[35%] h-[1px] bg-white'></div>
             </div>
+            <div className='text-white mt-5 text-2xl font-semibold border rounded-3xl px-5 py-2'><p>Hover Over My Skills!</p>
+            </div>
             <div className='flex flex-col bg-[#040417] gap-14 h-full w-full justify-center items-center p-10'>
                 <div id='Languages' className='w-full h-full flex gap-2 border-[2px] border-dashed backdrop-blur-sm border-[#1a1a5a] p-6 z-[100]' >
                     <div className='flex h-full w-[10%] justify-start items-start mt-14  z-[100]'>

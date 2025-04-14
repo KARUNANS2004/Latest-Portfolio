@@ -18,7 +18,7 @@ const Projects = () => {
         <Tilty
           perspective={900}
           reset={true}
-          max={10}
+          max={30}
           className="w-full sm:w-[90%] md:w-[70%] lg:w-[45%] rounded-[0.6rem] bg-white mx-auto z-[10]"
         >
           <div
@@ -96,7 +96,7 @@ const Projects = () => {
         <Tilty
           perspective={900}
           reset={true}
-          max={10}
+          max={30}
           className="w-full sm:w-[90%] md:w-[70%] lg:w-[45%] rounded-[0.6rem] bg-white mx-auto z-[10]"
         >
           <div
@@ -154,7 +154,7 @@ const Projects = () => {
         <Tilty
           perspective={900}
           reset={true}
-          max={10}
+          max={30}
           className="w-full sm:w-[90%] md:w-[70%] lg:w-[45%] rounded-[0.6rem] bg-white mx-auto z-[10]"
         >
           <div
