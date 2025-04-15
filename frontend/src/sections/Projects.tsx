@@ -42,7 +42,7 @@ const Projects = () => {
               onMouseLeave={() => {
                 setUberHover(false);
               }}
-              className="relative cursor-[url(car-cursor),_pointer] bg-[url('/src/assets/Uber.png')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-[0.6rem]"
+              className="relative bg-[url('/src/assets/Uber.png')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-[0.6rem]"
             >
               <div className=" text-white rounded-b-[0.6rem] font-semibold bg-gradient-to-t from-black to-transparent text-2xl sm:text-3xl md:text-4xl absolute bottom-0 w-full h-[25%] sm:h-[22%] flex flex-col justify-end gap-1 sm:gap-2 px-4 sm:px-6 pb-2">
                 <div
@@ -131,7 +131,7 @@ const Projects = () => {
               onMouseLeave={() => {
                 setTodoHover(false);
               }}
-              className="relative cursor-[url(car-cursor),_pointer] bg-[url('/src/assets/todo.jpg')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-[0.6rem]"
+              className="relative bg-[url('/src/assets/todo.jpg')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-[0.6rem]"
             >
               <div className=" text-white rounded-b-[0.6rem] font-semibold bg-gradient-to-t from-black to-transparent text-2xl sm:text-3xl md:text-4xl absolute bottom-0 w-full h-[25%] sm:h-[22%] flex flex-col justify-end gap-1 sm:gap-2 px-4 sm:px-6 pb-2">
                 <div
@@ -189,7 +189,7 @@ const Projects = () => {
               onMouseLeave={() => {
                 setPokedexHover(false);
               }}
-              className="relative overflow-hidden rounded-[0.6rem] cursor-[url(car-cursor),_pointer] bg-[url('/src/assets/Pokedex.jpg')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)]"
+              className="relative overflow-hidden rounded-[0.6rem] bg-[url('/src/assets/Pokedex.jpg')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)]"
             >
               <div className="text-white rounded-b-[0.6rem] font-semibold bg-gradient-to-t from-black to-transparent text-2xl sm:text-3xl md:text-4xl absolute bottom-0 w-full h-[25%] sm:h-[22%] flex flex-col justify-end gap-1 sm:gap-2 px-4 sm:px-6 pb-2">
                 <div
