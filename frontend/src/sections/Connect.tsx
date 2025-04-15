@@ -1,4 +1,5 @@
 import ConnectBackground from '../components/ConnectBackground';
+import leetcodeLogo from "../assets/leetcode.svg"
 
 const Connect = () => {
   return (
@@ -60,7 +61,7 @@ const Connect = () => {
                 id: 'leetcode',
                 icon: (
                   <img
-                    src="/src/assets/leetcode.svg"
+                    src={leetcodeLogo}
                     className="h-[28px] w-[28px] sm:h-[24px] sm:w-[24px]"
                     alt="leetcode"
                   />
