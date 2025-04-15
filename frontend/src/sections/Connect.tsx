@@ -1,7 +1,22 @@
 import ConnectBackground from '../components/ConnectBackground';
 import leetcodeLogo from "../assets/leetcode.svg"
+import QRCode from "react-qr-code";
+import { div } from 'motion/react-client';
+import { useEffect, useState } from 'react';
 
 const Connect = () => {
+  const qrValue = "https://drive.google.com/file/d/1z8BdPMU26fRHEGLk501wKZRbe30z47Uv/view?usp=sharing"
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => { setScreenWidth(window.innerWidth) }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => { window.removeEventListener("resize", handleResize) }
+  }, [])
+
   return (
     <div className="relative bg-[#040417] mt-32 backdrop-blur-sm px-4 sm:px-2">
       {/* Background Particles */}
@@ -10,7 +25,7 @@ const Connect = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-white w-full flex flex-col items-center justify-between">
+      <div className="relative z-10 text-white w-full flex gap-12 flex-col items-center justify-between">
         <div className="relative w-full max-w-[90%] md:max-w-[800px] flex items-center justify-center connect-page backdrop-blur-sm rounded-[1.5rem] inset-0 z-10">
           <div className="w-full h-full p-6 sm:p-4 bg-[#040417] rounded-[1.5rem]">
             <h2 className="text-[32px] sm:text-[24px] font-semibold flex flex-col items-center gap-0">
@@ -25,9 +40,17 @@ const Connect = () => {
             </p>
           </div>
         </div>
+        {screenWidth >= 1024 ?
+          (<div className='rounded-xl flex flex-col items-center gap-5'>
+            <h2 className='text-2xl font-mono z-[1000] border rounded-full backdrop-blur-sm px-10 py-2'>Scan for Resume</h2>
+            <QRCode value={qrValue} className='rounded-xl border-[10px]' />
+          </div>)
+          : (
+            null
+          )}
 
         <div
-          className="rounded-[0.6rem] flex items-center justify-center bg-gradient-to-r from-[#0a0a23] via-[#14143b] to-[#57579a] bg-[length:200%_200%] animate-gradient mt-12 border border-[#15154f] w-[260px] sm:w-[90%] h-[60px] hover:scale-105 transition-transform duration-300 max-w-[300px]"
+          className="rounded-[0.6rem] flex items-center justify-center bg-gradient-to-r from-[#0a0a23] via-[#14143b] to-[#57579a] bg-[length:200%_200%] animate-gradient border border-[#15154f] w-[260px] sm:w-[90%] h-[60px] hover:scale-105 transition-transform duration-300 max-w-[300px]"
           onClick={() => {
             window.location.href = 'mailto:s.karuna0074@gmail.com';
           }}
@@ -39,7 +62,7 @@ const Connect = () => {
 
         <div
           id="lower-section-of-icons"
-          className="w-full p-5 mt-20 flex md:flex-col sm:flex-col items-center justify-between gap-6 text-center"
+          className="w-full p-5 mt-2 flex md:flex-col sm:flex-col items-center justify-between gap-6 text-center"
         >
           <h2 className="text-lg sm:text-base z-[101]">Made With ❤️ By Karuna Nidhan Singh</h2>
           <div
