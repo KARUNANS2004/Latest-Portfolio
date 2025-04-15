@@ -158,9 +158,11 @@ const Projects = () => {
                     <p className='text-blue-200 text-3xl p-1 rounded-full aspect-square text-center border w-12 bg-gray-800'><i className="ri-reactjs-fill font-extralight"></i></p>
                     <p className='text-blue-400 text-3xl p-1 rounded-full aspect-square text-center w-12 border -ml-2 bg-gray-800'><i className="ri-tailwind-css-fill"></i></p>
                     <p className='text-blue-400 text-3xl p-1 rounded-full aspect-square flex items-center justify-center w-12 border -ml-2 bg-gray-800'>
-                      <img className='h-8 w-8 rounded-md' src="/src/assets/ts.svg" />
+                      <img className='h-8 w-8 rounded-md' src={tsLogo} />
                     </p>
-                    <p className='text-red-600 text-3xl p-1 -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'><i className="ri-npmjs-fill"></i></p>
+                    <p className='text-red-600 text-3xl p-1 -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'>
+                      <i className="ri-npmjs-fill"></i>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -216,7 +218,7 @@ const Projects = () => {
                     <p className='text-blue-200 text-3xl p-1 rounded-full aspect-square text-center border w-12 bg-gray-800'><i className="ri-reactjs-fill font-extralight"></i></p>
                     <p className='text-blue-400 text-3xl p-1 rounded-full aspect-square text-center w-12 border -ml-2 bg-gray-800'><i className="ri-tailwind-css-fill"></i></p>
                     <p className='text-blue-400 text-3xl p-1 rounded-full aspect-square flex items-center justify-center w-12 border -ml-2 bg-gray-800'>
-                      <img className='h-8 w-8 rounded-md' src="/src/assets/ts.svg" />
+                      <img className='h-8 w-8 rounded-md' src={tsLogo} />
                     </p>
                   </div>
                 </div>
