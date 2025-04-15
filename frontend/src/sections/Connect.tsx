@@ -1,7 +1,6 @@
 import ConnectBackground from '../components/ConnectBackground';
 import leetcodeLogo from "../assets/leetcode.svg"
 import QRCode from "react-qr-code";
-import { div } from 'motion/react-client';
 import { useEffect, useState } from 'react';
 
 const Connect = () => {
