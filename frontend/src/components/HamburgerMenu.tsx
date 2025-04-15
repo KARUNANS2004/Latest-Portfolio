@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence, transform, easeInOut } from "framer-motion";
-import { transformNormalToView } from "three/tsl";
-import { transition } from "three/examples/jsm/tsl/display/TransitionNode.js";
-import { easeIn } from "motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Menu items
 const menuItems = ["Home", "About", "Skills", "Projects", "Connect"];

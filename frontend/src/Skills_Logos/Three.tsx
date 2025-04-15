@@ -1,6 +1,6 @@
-import React, { Suspense, useState } from 'react'
+import { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Html, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { OrbitControls } from '@react-three/drei'
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence } from 'framer-motion'

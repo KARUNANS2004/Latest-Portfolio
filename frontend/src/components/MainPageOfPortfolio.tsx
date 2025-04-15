@@ -3,7 +3,6 @@ import About from '../sections/About'
 import Projects from '../sections/Projects'
 import Skills from '../sections/Skills'
 import Connect from '../sections/Connect'
-import HTML from '../Skills_Logos/HTML'
 
 type SectionNames = "About" | "Projects" | "Skills" | "Connect" | "Home"; // ✅ Define allowed keys
 

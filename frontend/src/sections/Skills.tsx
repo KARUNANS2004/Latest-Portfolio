@@ -1,7 +1,3 @@
-import { Canvas } from '@react-three/fiber'
-import { useGLTF } from '@react-three/drei'
-import { OrbitControls } from '@react-three/drei'
-import React, { Suspense } from 'react'
 import ReactLogo from '../Skills_Logos/ReactLogo'
 import HTML from '../Skills_Logos/HTML'
 import CSS from '../Skills_Logos/CSS'

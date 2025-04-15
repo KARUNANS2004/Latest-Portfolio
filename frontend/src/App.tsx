@@ -6,7 +6,6 @@ import BallScreen from './components/BallScreen'
 import MainPageOfPortfolio from './components/MainPageOfPortfolio'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   // this usestate will serve as the button which will appear on the screen when the site loads clicking which will take us to the main portfolio
   const [ballClicked, setballClicked] = useState(false)

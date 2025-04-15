@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Cursor, Typewriter } from 'react-simple-typewriter';
 import profileImage from '../assets/profile-pic.jpg';
 import { motion } from 'framer-motion';

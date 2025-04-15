@@ -1,5 +1,5 @@
-import React, { Suspense, useState } from 'react'
-import { Canvas, invalidate } from '@react-three/fiber'
+import { Suspense, useState } from 'react'
+import { Canvas } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { OrbitControls } from '@react-three/drei'
 import { useInView } from 'react-intersection-observer';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Tilty from 'react-tilty';
 
 
@@ -105,23 +105,23 @@ const Projects = () => {
           >
             <div
               onClick={() => {
-                if (pokedexHover) {
+                if (todoHover) {
                   window.open("https://todo-crud-app-by-ts.netlify.app/", "_blank");
                 }
               }}
               onMouseEnter={() => {
-                setPokedexHover(true);
+                setTodoHover(true);
               }}
               onMouseLeave={() => {
-                setPokedexHover(false);
+                setTodoHover(false);
               }}
               className="relative cursor-[url(car-cursor),_pointer] bg-[url('/src/assets/todo.jpg')] bg-center bg-no-repeat bg-cover w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-[0.6rem]"
             >
               <div className=" text-white rounded-b-[0.6rem] font-semibold bg-gradient-to-t from-black to-transparent text-2xl sm:text-3xl md:text-4xl absolute bottom-0 w-full h-[25%] sm:h-[22%] flex flex-col justify-end gap-1 sm:gap-2 px-4 sm:px-6 pb-2">
                 <div
                   className='flex justify-between items-center w-full'
-                  onMouseEnter={() => setPokedexHover(true)}
-                  onMouseLeave={() => setPokedexHover(false)}
+                  onMouseEnter={() => setTodoHover(true)}
+                  onMouseLeave={() => setTodoHover(false)}
                 >
                   <p className='m-0 p-0'>To-do List</p>
                   <a

@@ -1,4 +1,3 @@
-import React from 'react';
 import ConnectBackground from '../components/ConnectBackground';
 
 const Connect = () => {
