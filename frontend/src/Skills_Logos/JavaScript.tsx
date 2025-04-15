@@ -4,6 +4,7 @@ import { useGLTF } from '@react-three/drei'
 import { OrbitControls } from '@react-three/drei'
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence } from 'framer-motion'
+import JSlogo from "../assets/JS.png"
 
 const Model = () => {
     const gltf = useGLTF("/JS_Logo/Javascript_Symbol_0404113239_texture.gltf")
@@ -23,6 +24,19 @@ const JavaScript = () => {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >
+            <AnimatePresence>
+                {inView && !isHovering && (
+                    <motion.div
+                        className='absolute top-0'
+                        initial={{ opacity: 0, scale: 1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                    >
+                        <img src={JSlogo} />
+                    </motion.div>
+                )}
+            </AnimatePresence>
             <AnimatePresence>
                 {inView && isHovering && (
                     <motion.div

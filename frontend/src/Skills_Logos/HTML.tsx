@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { useGLTF, OrbitControls } from '@react-three/drei'
 import { useInView } from 'react-intersection-observer'
 import { motion, AnimatePresence } from 'framer-motion'
+import htmlLogo from "../assets/html.png"
 
 const Model = () => {
     const gltf = useGLTF("/Html_logo/scene.gltf")
@@ -28,6 +29,19 @@ const HTML = () => {
             onMouseLeave={() => setIsHovering(false)}
         >
             {/* AnimatePresence allows smooth mount/unmount */}
+            <AnimatePresence>
+                {inView && !isHovering && (
+                    <motion.div
+                        className='absolute top-0 flex items-center justify-center'
+                        initial={{ opacity: 0, scale: 1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                    >
+                        <img src={htmlLogo} className='' />
+                    </motion.div>
+                )}
+            </AnimatePresence>
             <AnimatePresence>
                 {inView && isHovering && (
                     <motion.div

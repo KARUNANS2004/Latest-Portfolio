@@ -4,10 +4,11 @@ import { useGLTF } from '@react-three/drei'
 import { OrbitControls } from '@react-three/drei'
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence } from 'framer-motion'
+import threeLogo from "../assets/threeJsLogo.png"
 
 const Model = () => {
     const gltf = useGLTF("/Three_JS_Logo/scene.gltf")
-    return <primitive object={gltf.scene} scale={[0.1, 0.1, 0.1]} position={[0, 0, 0]} />;
+    return <primitive object={gltf.scene} scale={[0.09, 0.09, 0.09]} position={[0, 0, 0]} />;
 };
 
 const Three = () => {
@@ -22,6 +23,19 @@ const Three = () => {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >
+            <AnimatePresence>
+                {inView && !isHovering && (
+                    <motion.div
+                        className='absolute -top-6 flex items-center justify-center'
+                        initial={{ opacity: 0, scale: 1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                    >
+                        <img src={threeLogo} className='scale-[0.6]' />
+                    </motion.div>
+                )}
+            </AnimatePresence>
             <AnimatePresence>
                 {inView && isHovering && (
                     <motion.div

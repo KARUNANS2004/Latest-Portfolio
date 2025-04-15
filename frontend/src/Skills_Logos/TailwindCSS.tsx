@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { OrbitControls } from '@react-three/drei'
 import { motion, AnimatePresence } from 'framer-motion'
+import tailwindLogo from "../assets/tailwind.png"
 
 
 const Model = () => {
@@ -18,6 +19,19 @@ const TailwindCSS = () => {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >
+            <AnimatePresence>
+                {!isHovering && (
+                    <motion.div
+                        className='absolute top-2 flex items-center justify-center'
+                        initial={{ opacity: 0, scale: 1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                    >
+                        <img src={tailwindLogo} className='scale-75' />
+                    </motion.div>
+                )}
+            </AnimatePresence>
             <AnimatePresence>
                 {isHovering && (
                     <motion.div

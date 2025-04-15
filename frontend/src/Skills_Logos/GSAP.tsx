@@ -4,6 +4,7 @@ import { useGLTF } from '@react-three/drei'
 import { OrbitControls } from '@react-three/drei'
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence } from 'framer-motion'
+import gsapLogo from "../assets/gsapLogo.png"
 
 const Model = () => {
     const gltf = useGLTF("/GSAP_Logo/GSAP.gltf")
@@ -23,6 +24,19 @@ const GSAP = () => {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >
+            <AnimatePresence>
+                {inView && !isHovering && (
+                    <motion.div
+                        className='absolute top-0 left-0 flex items-start justify-between'
+                        initial={{ opacity: 0, scale: 1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                    >
+                        <img src={gsapLogo} className='scale-[0.65]' />
+                    </motion.div>
+                )}
+            </AnimatePresence>
             <AnimatePresence>
                 {inView && isHovering && (
                     <motion.div

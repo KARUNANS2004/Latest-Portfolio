@@ -1,9 +1,10 @@
 import { Suspense, useState } from 'react'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, ThreeElements } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { OrbitControls } from '@react-three/drei'
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence } from 'framer-motion'
+import reactLogo from "../assets/reactLogo.png"
 
 const Model = () => {
     const gltf = useGLTF("/react logo/scene.gltf")
@@ -23,6 +24,19 @@ const ReactLogo = () => {
             onMouseLeave={() => setIsHovering(false)}
         >
             <AnimatePresence>
+                {inView && !isHovering && (
+                    <motion.div
+                        className='absolute top-0 flex items-center justify-center'
+                        initial={{ opacity: 0, scale: 1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                    >
+                        <img src={reactLogo} />
+                    </motion.div>
+                )}
+            </AnimatePresence>
+            <AnimatePresence>
                 {inView && isHovering && (
                     <motion.div
                         className='absolute top-0'
@@ -33,7 +47,7 @@ const ReactLogo = () => {
                     >
                         <Canvas className='max-h-32 max-w-32' camera={{ position: [5, 0, 0], near: 0.1, far: 100 }}>
                             <ambientLight intensity={2} />
-                            <directionalLight position={[0, 5, 5]} intensity={2} />
+                            <directionalLight position={[0, 5, 5]} intensity={1} />
                             <Suspense fallback={null}>
                                 <Model />
                             </Suspense>
