@@ -49,7 +49,6 @@ const CSS = () => {
                             </Suspense>
                             <OrbitControls
                                 enableZoom={false}
-                                setScale={[10, 10, 10]}
                                 maxDistance={2}
                                 minDistance={0.1}
                                 autoRotate
