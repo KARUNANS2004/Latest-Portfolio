@@ -56,11 +56,10 @@ const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string)
                                         ? {
                                             scale: 1.1,
                                             backgroundColor: "#12125b",
-                                            boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.5)",
-                                            translateX: '10px',
-                                            translateY: '5px',
+                                            translateX: 5,
+                                            translateY: 2,
                                             transition: {
-                                                duration: 0.3,
+                                                duration: 0.2,
                                             },
                                         }
                                         : {}
@@ -72,7 +71,7 @@ const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string)
                                     transition: {
                                         delay: index * 0.1,
                                         type: "spring",
-                                        stiffness: 120,
+                                        stiffness: 70,
                                     },
                                 }}
                                 exit={{
