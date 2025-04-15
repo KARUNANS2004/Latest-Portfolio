@@ -1,5 +1,10 @@
 import { useState } from 'react'
 import Tilty from 'react-tilty';
+import tsLogo from "../assets/ts.svg"
+import mongoLogo from "../assets/mongo.svg"
+import expressLogo from "../assets/express.svg"
+import gsapLogo from "../assets/gsap.svg"
+import jwtLogo from "../assets/jwt.svg"
 
 
 const Projects = () => {
@@ -65,26 +70,37 @@ const Projects = () => {
                   </h1>
 
                   <div className="flex flex-wrap items-center my-3">
-                    <p className='text-blue-200 text-3xl p-1 rounded-full aspect-square text-center border w-12 bg-gray-800'><i className="ri-reactjs-fill font-extralight"></i></p>
-                    <p className='text-blue-400 text-3xl p-1 rounded-full aspect-square text-center w-12 border -ml-2 bg-gray-800'><i className="ri-tailwind-css-fill"></i></p>
-                    <p className='text-purple-700 text-3xl p-1 rounded-full aspect-square text-center w-12 border -ml-2 bg-gray-800'><i className="font-extralight ri-remixicon-line"></i></p>
-                    <p className='text-blue-400 text-3xl p-1 rounded-full aspect-square flex items-center justify-center w-12 border -ml-2 bg-gray-800'>
-                      <img className='h-8 w-8 rounded-md' src="/src/assets/ts.svg" />
+                    <p className='text-blue-200 text-3xl p-1 rounded-full aspect-square text-center border w-12 bg-gray-800'>
+                      <i className="ri-reactjs-fill font-extralight"></i>
                     </p>
-                    <p className='text-red-600 text-3xl p-1 -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'><i className="ri-npmjs-fill"></i></p>
-                    <p className='text-green-500 text-3xl p-1 -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'><i className="ri-nodejs-fill"></i></p>
-                    <p className='text-yellow-100 text-3xl p-1 -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'><i className="ri-map-2-line font-extralight"></i></p>
+                    <p className='text-blue-400 text-3xl p-1 rounded-full aspect-square text-center w-12 border -ml-2 bg-gray-800'><i className="ri-tailwind-css-fill"></i>
+                    </p>
+                    <p className='text-purple-700 text-3xl p-1 rounded-full aspect-square text-center w-12 border -ml-2 bg-gray-800'>
+                      <i className="font-extralight ri-remixicon-line"></i>
+                    </p>
+                    <p className='text-blue-400 text-3xl p-1 rounded-full aspect-square flex items-center justify-center w-12 border -ml-2 bg-gray-800'>
+                      <img className='h-8 w-8 rounded-md' src={tsLogo} />
+                    </p>
+                    <p className='text-red-600 text-3xl p-1 -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'>
+                      <i className="ri-npmjs-fill"></i>
+                    </p>
+                    <p className='text-green-500 text-3xl p-1 -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'>
+                      <i className="ri-nodejs-fill"></i>
+                    </p>
+                    <p className='text-yellow-100 text-3xl p-1 -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'>
+                      <i className="ri-map-2-line font-extralight"></i>
+                    </p>
                     <p className='text-yellow-100 text-3xl p-1 flex items-center justify-center -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'>
-                      <img src="/src/assets/jwt.svg" />
+                      <img src={jwtLogo} />
                     </p>
                     <p className='text-yellow-100 text-3xl p-1 flex items-center justify-start -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'>
-                      <img className='h-8 w-10 -ml-1' src="/src/assets/gsap.svg" />
+                      <img className='h-8 w-10 -ml-1' src={gsapLogo} />
                     </p>
                     <p className='text-yellow-100 text-3xl p-1 flex items-center justify-center -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'>
-                      <img className='h-7 w-7' src="/src/assets/express.svg" />
+                      <img className='h-7 w-7' src={expressLogo} />
                     </p>
                     <p className='text-yellow-100 text-3xl p-1 flex items-center justify-center -ml-2 rounded-full aspect-square text-center border w-12 bg-gray-800'>
-                      <img className='h-7 w-7' src="/src/assets/mongo.svg" />
+                      <img className='h-7 w-7' src={mongoLogo} />
                     </p>
 
                   </div>
