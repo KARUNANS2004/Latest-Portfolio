@@ -14,7 +14,7 @@ const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string)
     };
 
     return (
-        <div className="fixed h-full pl-5 pt-5 z-[101]">
+        <div className="fixed pl-5 pt-5 z-[101] bg-transparent">
             {/* Animated Hamburger Icon */}
             <button className="w-12 h-12 flex flex-col justify-between items-center py-2 " onClick={toggleMenu}>
                 <motion.div
@@ -50,7 +50,7 @@ const HamburgerMenu = ({ scrollToSection }: { scrollToSection: (section: string)
                                     toggleMenu();
                                 }}
                                 key={item}
-                                className="p-4 bg-[#12125b] text-white rounded-xl cursor-pointer text-center"
+                                className="p-4 bg-[#060621] text-white rounded-xl cursor-pointer text-center"
                                 whileHover={
                                     !isExiting
                                         ? {
