@@ -76,7 +76,7 @@ const About = () => {
           <div id='leetcode' className='cursor-pointer flex flex-col gap-5 shadow-slate-600 bg-[#060621]  w-full lg:w-[40%]  rounded-3xl hover:translate-x-2 ease-linear duration-200'
             onClick={() => { window.open("https://leetcode.com/u/user7202mP/", '_blank') }}
           >
-            <img src={leetcodeLogo} alt="" className='h-[400px]' />
+            <img src={leetcodeLogo} alt="" className='h-[400px] p-10' />
             <h2 className='h-1/2 text-center text-2xl font-semibold'>Solved 200+ Questions on Leetcode with 1500+ Rating</h2>
           </div>
         </div>
